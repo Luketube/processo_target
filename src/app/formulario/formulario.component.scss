@@ -1,0 +1,56 @@
+.formulario{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+
+    div{
+        margin-top: 2rem;
+    }
+
+    label{
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    } label:hover{
+        cursor: pointer;
+    }
+
+    input{
+        border-color: red;
+        border-radius: 8px;
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    button{
+        background-color: red;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem; 
+    } button:hover{
+        cursor: pointer;
+    }
+
+    &__nome{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__telefone{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__botoes{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 80%;
+    }
+}
