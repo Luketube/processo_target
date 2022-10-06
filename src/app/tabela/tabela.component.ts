@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dados } from '../model/dados';
+import { TransferenciaService } from '../service/transferencia.service';
 
 @Component({
   selector: 'app-tabela',
@@ -10,9 +11,11 @@ export class TabelaComponent implements OnInit {
   dados: Dados[] = [];
   displayedColumns = ['nome', 'telefone']
 
-  constructor() {}
+  constructor(private transferencia: TransferenciaService) {}
 
   ngOnInit(): void {
+    this.dados = this.transferencia.obtemDados();
+    
   }
 
 }

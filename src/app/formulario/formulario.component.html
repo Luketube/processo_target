@@ -1,17 +1,17 @@
 <form class="formulario">
     <div class="formulario__nome">
         <label for="nome">Nome</label>
-        <input id="nome" type="text">
+        <input id="nome" type="text" [(ngModel)]="nome" name="nome">
     </div>
 
     <div class="formulario__telefone">
         <label for="telefone">Telefone</label>
-        <input id="telefone" type="text">
+        <input id="telefone" type="number" [(ngModel)]="telefone" name="telefone">
     </div>
 
     <div class="formulario__botoes">
-        <button>Limpar</button>
-        <button>Salvar</button>
+        <button (click)="limparCampos()"> Limpar </button>
+        <button (click)="salvar()"> Salvar </button>
     </div>
 </form>
 

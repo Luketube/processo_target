@@ -1,2 +1,8 @@
-<app-cabecalho></app-cabecalho>
-<app-tabela></app-tabela>
+<header class="cabecalho">
+    <a routerLink="formulario" routerLinkActive="ativo" class="cabecalho__link">Formulario</a>
+    <h1 class="cabecalho__logo">Target Dados</h1>
+    <a routerLink="tabela" routerLinkActive="ativo" class="cabecalho__link">Tabela</a>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>
