@@ -12,7 +12,7 @@
         text-decoration: none;
     } &__link:hover{
         cursor: pointer;
-        color: red;
+        color: #D32F2F;
         transition: 1s;
     }
 
@@ -23,5 +23,5 @@
 }
 
 .ativo{
-    color: red;
+    opacity: 0%;
 }

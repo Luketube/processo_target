@@ -9,7 +9,7 @@ import { TransferenciaService } from '../service/transferencia.service';
 })
 export class TabelaComponent implements OnInit {
   dados: Dados[] = [];
-  displayedColumns = ['nome', 'telefone']
+  displayedColumns = ['nome', 'telefone', 'acoes']
 
   constructor(private transferencia: TransferenciaService) {}
 

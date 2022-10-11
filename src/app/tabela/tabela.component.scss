@@ -5,4 +5,25 @@ table {
 
   th{
     font-size: 2rem;
+    font-weight: bold;
+  }
+
+  td{
+    font-size: 1.5rem;
+  }
+
+  .mat-column-acoes{
+    display: table-cell;
+    vertical-align: inherit;
+  }
+
+  .mat-column-acoes{
+    padding: 0;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgba(0, 0, 0, 0.12);
+  }
+
+  .mat-mini-fab:not([class*=mat-elevation-z]){
+    box-shadow:none;
   }
