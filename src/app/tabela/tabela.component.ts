@@ -7,7 +7,8 @@ import { TransferenciaService } from '../service/transferencia.service';
   templateUrl: './tabela.component.html',
   styleUrls: ['./tabela.component.scss']
 })
-export class TabelaComponent implements OnInit {
+
+export class TabelaComponent implements OnInit  {
   dados: Dados[] = [];
   displayedColumns = ['nome', 'telefone', 'acoes']
 
@@ -16,6 +17,10 @@ export class TabelaComponent implements OnInit {
   ngOnInit(): void {
     this.dados = this.transferencia.obtemDados();
     
+  }
+
+  deletarItem(id: Date){
+    this.dados = this.dados.filter((u) => u.id !== id);
   }
 
 }

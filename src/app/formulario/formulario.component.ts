@@ -18,7 +18,7 @@ export class FormularioComponent implements OnInit {
 
 
   salvar(): void{
-    const dadosSalvos: Dados = {nome: this.nome, telefone: this.telefone}
+    const dadosSalvos: Dados = {nome: this.nome, telefone: this.telefone, id: new Date()}
     this.transferencia.adiciona(dadosSalvos);
     this.limparCampos();
   }

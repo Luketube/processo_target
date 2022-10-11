@@ -15,8 +15,12 @@ export class TransferenciaService {
     this.listaDados.push(dado);
   }
 
+  exclui(id: number){
+    this.listaDados.splice(id, 1);
+    
+  }
+
   obtemDados(){
     return this.listaDados;
-    
   }
 }
