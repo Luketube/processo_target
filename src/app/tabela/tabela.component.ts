@@ -21,6 +21,7 @@ export class TabelaComponent implements OnInit  {
 
   deletarItem(id: Date){
     this.dados = this.dados.filter((u) => u.id !== id);
+    this.transferencia.atualiza(this.dados);
   }
 
 }

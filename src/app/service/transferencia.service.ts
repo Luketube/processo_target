@@ -17,7 +17,10 @@ export class TransferenciaService {
 
   exclui(id: number){
     this.listaDados.splice(id, 1);
-    
+  }
+
+  atualiza(dados: Dados[]){
+    this.listaDados = dados;
   }
 
   obtemDados(){
