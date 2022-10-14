@@ -1,4 +1,4 @@
-table {
+table, mat-form-field {
     margin: 2rem 10%;
     width: 80%;
   }
@@ -8,7 +8,7 @@ table {
     font-weight: bold;
   }
 
-  td{
+  td, mat-form-field{
     font-size: 1.5rem;
   }
 
