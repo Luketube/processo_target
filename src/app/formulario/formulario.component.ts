@@ -10,7 +10,7 @@ import { TransferenciaService } from '../service/transferencia.service';
 })
 export class FormularioComponent implements OnInit {
   nome: string = '';
-  telefone: number = 0;
+  telefone: any;
 
   constructor(private transferencia: TransferenciaService) {}
 
@@ -25,7 +25,7 @@ export class FormularioComponent implements OnInit {
 
   limparCampos(): void{
     this.nome = '';
-    this.telefone = 0;
+    this.telefone = '';
   }
 
 }
