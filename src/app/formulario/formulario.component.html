@@ -1,4 +1,4 @@
-<form (submit)="salvar()" class="formulario">
+<form class="formulario">
     <mat-form-field class="formulario__conteudo" appearance="fill">
       <mat-label>Nome</mat-label>
       <input [(ngModel)]="nome" name="nome" type="email" matInput [formControl]="nomeFormControl" placeholder="Nome">
@@ -20,7 +20,7 @@
 
       <div class="formulario__botoes">
         <button class="botao" mat-raised-button color="primary" (click)="limparCampos()"> Limpar </button>
-        <button class="botao" mat-raised-button color="primary" type="submit"> Salvar </button>
+        <button class="botao" mat-raised-button color="primary" (click)="salvar()"> Salvar </button>
     </div>
   </form>
   
