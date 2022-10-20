@@ -1,18 +1,49 @@
-<form class="formulario">
+<form (submit)="salvar()" class="formulario">
+    <mat-form-field class="formulario__conteudo" appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input [(ngModel)]="nome" name="nome" type="email" matInput [formControl]="nomeFormControl" placeholder="Nome">
+      <mat-error *ngIf="nomeFormControl.hasError('required')">
+        Nome <strong>obrigatório</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="formulario__conteudo" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input [(ngModel)]="telefone" name="telefone" type="email" matInput [formControl]="telefoneFormControl" placeholder="Nome">
+        <mat-error *ngIf="telefoneFormControl.hasError('pattern') && !telefoneFormControl.hasError('required')">
+            formato <strong>(xx) x xxxx-xxxx</strong> incorreto
+        </mat-error>
+        <mat-error *ngIf="telefoneFormControl.hasError('required')">
+          Telefone <strong>obrigatório</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <div class="formulario__botoes">
+        <button class="botao" mat-raised-button color="primary" (click)="limparCampos()"> Limpar </button>
+        <button class="botao" mat-raised-button color="primary" type="submit"> Salvar </button>
+    </div>
+  </form>
+  
+
+
+
+
+
+<!-- <form class="formulario" (submit)="salvar()">
     <div class="formulario__nome">
         <label for="nome">Nome</label>
-        <input id="nome" type="text" [(ngModel)]="nome" name="nome" placeholder="Nome">
+        <input id="nome" type="text" [(ngModel)]="nome" name="nome" placeholder="Nome" required>
     </div>
 
     <div class="formulario__telefone">
         <label for="telefone">Telefone</label>
-        <input id="telefone" type="number" [(ngModel)]="telefone" name="telefone" placeholder="(xx) x xxxx-xxxx">
+        <input id="telefone" type="number" [(ngModel)]="telefone" name="telefone" placeholder="(xx) x xxxx-xxxx" required>
     </div>
 
     <div class="formulario__botoes">
         <button mat-raised-button color="primary" (click)="limparCampos()"> Limpar </button>
-        <button mat-raised-button color="primary" (click)="salvar()"> Salvar </button>
+        <button mat-raised-button color="primary" type="submit"> Salvar </button>
     </div>
-</form>
+</form> -->
 
 
